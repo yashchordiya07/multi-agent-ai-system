@@ -126,7 +126,24 @@ project-root/
             ├── ObservabilityPanel.jsx
             └── PipelineBar.jsx
 ```
+---
 
+## 📸 Demo Screenshots
+
+### 🔹 Multi-Agent Decision Flow
+![Decision Example 1](./screenshots/decision1.png)
+
+### 🔹 High Confidence Architecture Decision
+![Decision Example 2](./screenshots/decision2.png)
+
+### 🔹 Business Strategy Analysis
+![Decision Example 3](./screenshots/decision3.png)
+
+### 🔹 AI Adoption Decision (Banking Use Case)
+![Decision Example 4](./screenshots/decision4.png)
+
+### 🔹 Ambiguous Input Handling (Critic + Refinement Loop)
+![Decision Example 5](./screenshots/decision5.png)
 ---
 
 ## API reference
