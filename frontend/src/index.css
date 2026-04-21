@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  body { @apply bg-surface text-slate-200 min-h-screen; }
+
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { @apply bg-surface; }
+  ::-webkit-scrollbar-thumb { @apply bg-surface-border rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { background: #374151; }
+}
+
+@layer components {
+  /* Cards */
+  .card { @apply bg-surface-card border border-surface-border rounded-2xl p-5; }
+  .card-raised { @apply bg-surface-raised border border-surface-border rounded-2xl p-5; }
+
+  /* Badges */
+  .badge { @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium border; }
+  .badge-violet { @apply bg-violet-500/10 text-violet-300 border-violet-500/30; }
+  .badge-blue   { @apply bg-blue-500/10   text-blue-300   border-blue-500/30;   }
+  .badge-amber  { @apply bg-amber-500/10  text-amber-300  border-amber-500/30;  }
+  .badge-green  { @apply bg-emerald-500/10 text-emerald-300 border-emerald-500/30; }
+  .badge-red    { @apply bg-red-500/10    text-red-300    border-red-500/30;    }
+  .badge-slate  { @apply bg-slate-500/10  text-slate-400  border-slate-500/20;  }
+
+  /* Labels */
+  .label { @apply text-[10px] font-semibold uppercase tracking-widest text-slate-500 mb-2 block; }
+
+  /* Dot */
+  .dot { @apply w-1.5 h-1.5 rounded-full flex-shrink-0 mt-[7px]; }
+
+  /* Mono value */
+  .mono { @apply font-mono text-xs; }
+}
+
+/* Shimmer skeleton */
+@keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+.skeleton {
+  background: linear-gradient(90deg, #1c2333 25%, #252e42 50%, #1c2333 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+  border-radius: 6px;
+}
+
+/* Focus ring */
+textarea:focus, input:focus { outline: none; box-shadow: 0 0 0 2px #7c6af740; }
